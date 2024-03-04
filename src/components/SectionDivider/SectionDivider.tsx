@@ -1,13 +1,18 @@
-import { FC, ComponentPropsWithoutRef } from "react";
+"use client";
 
-interface SectionDividerProps extends ComponentPropsWithoutRef<"div"> {}
+import { FC } from "react";
+import { HTMLMotionProps, motion } from "framer-motion";
+
+interface SectionDividerProps extends HTMLMotionProps<"div"> {}
 
 const SectionDivider: FC<SectionDividerProps> = ({ ...props }) => {
   return (
-    <div
-      className="my-24 hidden h-16 w-1 rounded-full bg-gray-200 sm:block"
-      {...props}
-    ></div>
+    <motion.div
+      className="my-24 hidden h-16 w-1 rounded-full bg-gray-200 sm:block dark:bg-opacity-20"
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.125 }}
+    ></motion.div>
   );
 };
 
