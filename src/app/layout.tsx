@@ -1,14 +1,14 @@
+import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
 import { Header } from "@/components/Header";
 // import { Footer } from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Jeyhun Abilov | Software Engineer",
-  description: "Jeyhun is a Full-stack Developer with 2 years of experience",
+  title: "Jeyhun | Software Developer",
+  description: `Jeyhun is a Full-stack Developer with ${new Date().getFullYear() - 2022} years of experience`,
 };
 
 export default function RootLayout({
