@@ -58,14 +58,17 @@ const Intro: FC<IntroProps> = ({ ...props }) => {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I&apos;m Jeyhun.</span>
+        <span className="font-bold">Hello, I&apos;m Jeyhun Abilov.</span>
         <br /> I&apos;m a{" "}
         <span className="font-bold">
-          Full-stack Software Developer <br />
+          Full Stack Developer <br />
         </span>{" "}
-        with <span className="font-bold">2 years</span> of experience. <br />I
-        enjoy learning new technologies and building interactive web
-        applications
+        with{" "}
+        <span className="font-bold">
+          {new Date().getFullYear() - 2022} years
+        </span>{" "}
+        of experience. <br />I enjoy learning new technologies and building
+        interactive web applications
       </motion.h1>
       <motion.div
         className="flex flex-col items-center justify-center gap-2 px-4 text-lg font-medium sm:flex-row"
