@@ -8,9 +8,9 @@ import { FaGithubSquare } from "react-icons/fa";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-interface IntroProps extends ComponentPropsWithRef<"section"> {}
+interface IntroSectionProps extends ComponentPropsWithRef<"section"> {}
 
-const Intro: FC<IntroProps> = ({ ...props }) => {
+const IntroSection: FC<IntroSectionProps> = ({ ...props }) => {
   return (
     <section
       {...props}
@@ -91,7 +91,7 @@ const Intro: FC<IntroProps> = ({ ...props }) => {
         </Link>
         <a
           className="borderBlack group flex cursor-pointer items-center gap-2 rounded-full bg-white px-7 py-3 outline-none transition hover:scale-110 focus:scale-110 active:scale-105 dark:bg-white/10"
-          href="/CV.pdf"
+          href="CV(Jeyhun_Abilov).pdf"
           download
         >
           Download CV{" "}
@@ -100,14 +100,14 @@ const Intro: FC<IntroProps> = ({ ...props }) => {
         <span className="flex gap-2">
           <a
             className="borderBlack flex h-[53.59px] w-[53.59px] cursor-pointer items-center justify-center gap-2 rounded-full bg-white p-4 text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60"
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/abilovv599/"
             target="_blank"
           >
             <BsLinkedin />
           </a>
           <a
             className="borderBlack flex h-[53.59px] w-[53.59px] cursor-pointer items-center justify-center gap-2 rounded-full bg-white p-4 text-[1.35rem] text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60"
-            href="https://github.com"
+            href="https://github.com/Abilov599"
             target="_blank"
           >
             <FaGithubSquare />
@@ -118,4 +118,4 @@ const Intro: FC<IntroProps> = ({ ...props }) => {
   );
 };
 
-export { Intro };
+export { IntroSection };
