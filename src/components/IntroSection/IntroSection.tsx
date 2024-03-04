@@ -14,7 +14,6 @@ const IntroSection: FC<IntroSectionProps> = ({ ...props }) => {
   return (
     <section
       {...props}
-      //   ref={ref}
       id="home"
       className="mb-28 max-w-[50rem] scroll-mt-[100rem] text-center sm:mb-0"
     >
@@ -81,10 +80,6 @@ const IntroSection: FC<IntroSectionProps> = ({ ...props }) => {
         <Link
           href="#contact"
           className="group flex items-center gap-2 rounded-full bg-gray-900 px-7 py-3 text-white outline-none transition hover:scale-110 hover:bg-gray-950 focus:scale-110 active:scale-105"
-          //   onClick={() => {
-          //     setActiveSection("Contact");
-          //     setTimeOfLastClick(Date.now());
-          //   }}
         >
           Contact me here{" "}
           <BsArrowRight className="opacity-70 transition group-hover:translate-x-1" />
