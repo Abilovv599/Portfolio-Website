@@ -78,7 +78,7 @@ const IntroSection: FC<IntroSectionProps> = ({ ...props }) => {
         }}
       >
         <Link
-          href="#contact"
+          href="/#contact"
           className="group flex items-center gap-2 rounded-full bg-gray-900 px-7 py-3 text-white outline-none transition hover:scale-110 hover:bg-gray-950 focus:scale-110 active:scale-105"
         >
           Contact me here{" "}
@@ -86,7 +86,7 @@ const IntroSection: FC<IntroSectionProps> = ({ ...props }) => {
         </Link>
         <a
           className="borderBlack group flex cursor-pointer items-center gap-2 rounded-full bg-white px-7 py-3 outline-none transition hover:scale-110 focus:scale-110 active:scale-105 dark:bg-white/10"
-          href="CV(Jeyhun_Abilov).pdf"
+          href="/CV(Jeyhun_Abilov).pdf"
           download
         >
           Download CV{" "}
