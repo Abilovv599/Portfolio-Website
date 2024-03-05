@@ -19,9 +19,20 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
-      "@components/*": ["./src/components/*"]
+      "@components/*": ["./src/components/*"],
+      "@sections/*": ["./src/sections/*"],
+      "@layouts/*": ["./src/layouts/*"],
+      "@views/*": ["./src/views/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "next.config.mts",
+    "dist/types/**/*.ts",
+    "build/types/**/*.ts"
+  ],
   "exclude": ["node_modules"]
 }
