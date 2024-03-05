@@ -1,14 +1,5 @@
-import { AboutSection } from "@/components/AboutSection";
-import { IntroSection } from "@/components/IntroSection";
-import { SectionDivider } from "@/components/SectionDivider";
+import { Home } from "@/views/Home";
 
-export default function Home() {
-  return (
-    <main className="flex flex-col items-center px-4">
-      <IntroSection />
-      <SectionDivider />
-      <AboutSection />
-      <SectionDivider />
-    </main>
-  );
+export default function HomePage() {
+  return <Home />;
 }
