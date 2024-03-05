@@ -1,7 +1,8 @@
 import { FC, ComponentPropsWithoutRef } from "react";
-import { AboutSection } from "@/sections/About";
-import { IntroSection } from "@/sections/Intro";
+import { IntroSection } from "@sections/Intro";
 import { SectionDivider } from "@components/SectionDivider";
+import { AboutSection } from "@sections/About";
+import { ProjectsSection } from "@sections/Projects";
 
 interface HomePageProps extends ComponentPropsWithoutRef<"main"> {}
 
@@ -12,6 +13,7 @@ const HomePage: FC<HomePageProps> = ({ ...props }) => {
       <SectionDivider />
       <AboutSection />
       <SectionDivider />
+      <ProjectsSection />
     </main>
   );
 };
