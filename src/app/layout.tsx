@@ -12,6 +12,8 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Jeyhun | Software Developer",
   description: `Jeyhun is a Full-stack Developer with ${new Date().getFullYear() - 2022} years of experience`,
+  keywords:
+    "Jeyhun, Abilov, Full-stack, Developer, Software, Engineer, Web, Developer, Frontend, Backend, JavaScript, TypeScript, React, Next.js, Node.js, TailwindCSS, MongoDB, PostgreSQL, MySQL, GraphQL, Apollo, Prisma, Vercel, Netlify, AWS, Azure, Docker, Kubernetes, CI/CD, DevOps, SEO, Performance, Accessibility, PWA, Microservices, Clean, Code, SOLID, Design, Patterns, Architecture, Algorithms, Data, Structures, OOP, FP",
 };
 
 export default function RootLayout({
