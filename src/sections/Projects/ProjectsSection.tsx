@@ -7,7 +7,7 @@ interface ProjectsSectionProps extends ComponentPropsWithoutRef<"section"> {}
 
 const ProjectsSection: FC<ProjectsSectionProps> = ({ ...props }) => {
   return (
-    <section id="projects" className="mb-28 scroll-mt-28" {...props}>
+    <section id="projects" className="mb-28 scroll-mt-24" {...props}>
       <SectionHeading>My Projects</SectionHeading>
       <div>
         {projectsData.map((project, index) => (
