@@ -3,12 +3,15 @@
 import { FC } from "react";
 import { HTMLMotionProps, motion } from "framer-motion";
 import { SectionHeading } from "@components/SectionHeading";
+import { useSectionInView } from "@/hooks/useSectionInView";
 
 interface AboutSectionProps extends HTMLMotionProps<"section"> {}
 
 const AboutSection: FC<AboutSectionProps> = ({ ...props }) => {
+  const { ref } = useSectionInView("About", 0.5);
   return (
     <motion.section
+      ref={ref}
       className="max-w-[45rem] scroll-mt-64 text-center leading-8"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
