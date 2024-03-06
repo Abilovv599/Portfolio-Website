@@ -84,7 +84,7 @@ const IntroSection: FC<IntroSectionProps> = ({ ...props }) => {
       >
         <Link
           href="/#contact"
-          className="group flex items-center gap-2 rounded-full bg-gray-900 px-7 py-3 text-white outline-none transition hover:scale-110 hover:bg-gray-950 focus:scale-110 active:scale-105"
+          className="group flex items-center gap-2 rounded-full bg-gray-900 px-7 py-3 text-white outline-none transition hover:scale-110 hover:bg-gray-950 active:scale-105"
           onClick={() => {
             setActiveSection("Contact");
             setTimeOfLastClick(Date.now());
@@ -94,7 +94,7 @@ const IntroSection: FC<IntroSectionProps> = ({ ...props }) => {
           <BsArrowRight className="opacity-70 transition group-hover:translate-x-1" />
         </Link>
         <a
-          className="borderBlack group flex cursor-pointer items-center gap-2 rounded-full bg-white px-7 py-3 outline-none transition hover:scale-110 focus:scale-110 active:scale-105 dark:bg-white/10"
+          className="borderBlack group flex cursor-pointer items-center gap-2 rounded-full bg-white px-7 py-3 outline-none transition hover:scale-110 active:scale-105 dark:bg-white/10"
           href="/CV(Jeyhun_Abilov).pdf"
           download
         >
@@ -103,14 +103,14 @@ const IntroSection: FC<IntroSectionProps> = ({ ...props }) => {
         </a>
         <span className="flex gap-2">
           <a
-            className="borderBlack flex h-[53.59px] w-[53.59px] cursor-pointer items-center justify-center gap-2 rounded-full bg-white p-4 text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60"
+            className="borderBlack flex h-[53.59px] w-[53.59px] cursor-pointer items-center justify-center gap-2 rounded-full bg-white p-4 text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 active:scale-105 dark:bg-white/10 dark:text-white/60"
             href="https://www.linkedin.com/in/abilovv599/"
             target="_blank"
           >
             <BsLinkedin />
           </a>
           <a
-            className="borderBlack flex h-[53.59px] w-[53.59px] cursor-pointer items-center justify-center gap-2 rounded-full bg-white p-4 text-[1.35rem] text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60"
+            className="borderBlack flex h-[53.59px] w-[53.59px] cursor-pointer items-center justify-center gap-2 rounded-full bg-white p-4 text-[1.35rem] text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 active:scale-105 dark:bg-white/10 dark:text-white/60"
             href="https://github.com/Abilov599"
             target="_blank"
           >
