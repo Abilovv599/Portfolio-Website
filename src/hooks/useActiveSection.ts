@@ -1,7 +1,7 @@
-import { ActiveSectionContext } from "@/context/activeSectionContext";
+import { ActiveSectionContext } from "@/context";
 import { useContext } from "react";
 
-export function useActiveSectionContext() {
+function useActiveSectionContext() {
   const context = useContext(ActiveSectionContext);
 
   if (context === null) {
@@ -12,3 +12,5 @@ export function useActiveSectionContext() {
 
   return context;
 }
+
+export { useActiveSectionContext };

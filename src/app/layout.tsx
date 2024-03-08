@@ -3,9 +3,8 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Inter } from "next/font/google";
-import { Header } from "@/layouts/Header";
-import { ActiveSectionContextProvider } from "@/context/activeSectionProvider";
-import { Footer } from "@/layouts/Footer";
+import { Header, Footer } from "@/layouts";
+import { ActiveSectionContextProvider } from "@/context";
 
 const inter = Inter({ subsets: ["latin"] });
 

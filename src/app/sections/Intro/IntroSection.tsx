@@ -7,8 +7,7 @@ import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { FaGithubSquare } from "react-icons/fa";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useActiveSectionContext } from "@/hooks/useActiveSection";
-import { useSectionInView } from "@/hooks/useSectionInView";
+import { useActiveSectionContext, useSectionInView } from "@/hooks";
 
 interface IntroSectionProps extends ComponentPropsWithRef<"section"> {}
 
@@ -68,7 +67,14 @@ const IntroSection: FC<IntroSectionProps> = ({ ...props }) => {
           {new Date().getFullYear() - 2022} years
         </span>{" "}
         of experience. I enjoy building{" "}
-        <span className="italic">Full Stack Web Applications with Next.js</span>
+        <span className="italic">
+          Full-stack Web Applications with{" "}
+          <span className="underline">
+            <a href="https://nextjs.org/" target="_blank">
+              Next.js
+            </a>
+          </span>
+        </span>
       </motion.h1>
       <motion.div
         className="flex flex-col items-center justify-center gap-2 px-4 text-lg font-medium sm:flex-row"
