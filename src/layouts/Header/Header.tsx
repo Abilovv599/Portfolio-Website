@@ -1,17 +1,17 @@
 "use client";
 
 import { FC, ComponentPropsWithoutRef } from "react";
+import { useActiveSectionStore } from "@/store";
 import { motion } from "framer-motion";
 import { links } from "@/data";
 import Link from "next/link";
 import clsx from "clsx";
-import { useActiveSectionContext } from "@/hooks";
 
 interface HeaderProps extends ComponentPropsWithoutRef<"header"> {}
 
 const Header: FC<HeaderProps> = ({ ...props }) => {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
-    useActiveSectionContext();
+    useActiveSectionStore();
   return (
     <header {...props} className="relative z-[999]">
       <motion.div
