@@ -2,10 +2,10 @@
 
 import { FC, ComponentPropsWithoutRef } from "react";
 import { motion } from "framer-motion";
-import { links } from "@/data/data";
+import { links } from "@/data";
 import Link from "next/link";
 import clsx from "clsx";
-import { useActiveSectionContext } from "@/hooks/useActiveSection";
+import { useActiveSectionContext } from "@/hooks";
 
 interface HeaderProps extends ComponentPropsWithoutRef<"header"> {}
 

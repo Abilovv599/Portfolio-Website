@@ -1,10 +1,9 @@
 "use client";
 
-import { projectsData } from "@/data/data";
-import { SectionHeading } from "@components/SectionHeading";
+import { projectsData } from "@/data";
+import { SectionHeading, Project } from "@/components";
 import { FC, ComponentPropsWithoutRef, Fragment } from "react";
-import { Project } from "@/components/Project";
-import { useSectionInView } from "@/hooks/useSectionInView";
+import { useSectionInView } from "@/hooks";
 
 interface ProjectsSectionProps extends ComponentPropsWithoutRef<"section"> {}
 

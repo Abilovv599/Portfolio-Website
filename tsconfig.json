@@ -18,11 +18,7 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"],
-      "@components/*": ["./src/components/*"],
-      "@sections/*": ["./src/sections/*"],
-      "@layouts/*": ["./src/layouts/*"],
-      "@views/*": ["./src/views/*"]
+      "@/*": ["./src/*"]
     }
   },
   "include": [
