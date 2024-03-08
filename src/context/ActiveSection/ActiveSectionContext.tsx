@@ -1,4 +1,4 @@
-import { SectionName } from "@/types/sectionName";
+import { SectionName } from "@/types";
 import { createContext, Dispatch, SetStateAction } from "react";
 
 type ActiveSectionContextProps = {

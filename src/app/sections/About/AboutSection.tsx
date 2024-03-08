@@ -2,7 +2,7 @@
 
 import { FC } from "react";
 import { HTMLMotionProps, motion } from "framer-motion";
-import { SectionHeading } from "@components/SectionHeading";
+import { SectionHeading } from "@/components";
 import { useSectionInView } from "@/hooks/useSectionInView";
 
 interface AboutSectionProps extends HTMLMotionProps<"section"> {}
