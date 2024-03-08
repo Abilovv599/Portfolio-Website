@@ -7,13 +7,14 @@ import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { FaGithubSquare } from "react-icons/fa";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useActiveSectionContext, useSectionInView } from "@/hooks";
+import { useSectionInView } from "@/hooks";
+import { useActiveSectionStore } from "@/store";
 
 interface IntroSectionProps extends ComponentPropsWithRef<"section"> {}
 
 const IntroSection: FC<IntroSectionProps> = ({ ...props }) => {
   const { ref } = useSectionInView("Home", 0.5);
-  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionStore();
   return (
     <section
       ref={ref}
