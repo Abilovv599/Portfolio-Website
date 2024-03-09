@@ -28,7 +28,7 @@ const SkillsSection: FC<SkillsSectionProps> = ({ ...props }) => {
   return (
     <section
       ref={ref}
-      className="mb-28 mt-10 max-w-6xl scroll-mt-32 text-center sm:mb-40"
+      className="mb-28 mt-10 max-w-6xl scroll-mt-32 text-center sm:mb-7"
       id="skills"
       {...props}
     >
