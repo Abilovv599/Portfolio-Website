@@ -30,28 +30,112 @@ export const links = [
 ] as const;
 
 export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Node.js",
-  "C#",
-  ".NET",
-  "ASP.NET",
-  "Git",
-  "Tailwind",
-  "Framer Motion",
-  "Prisma",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
-  "PostgreSQL",
-  "Python",
-] as const;
+  {
+    technology: "Git",
+    documentation: "https://git-scm.com/",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
+  },
+  {
+    technology: "HTML5",
+    documentation: "https://www.w3.org/html/",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+  },
+  {
+    technology: "CSS3",
+    documentation: "https://www.w3schools.com/css/",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
+  },
+  {
+    technology: "SCSS",
+    documentation: "https://sass-lang.com",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg",
+  },
+  {
+    technology: "Tailwind CSS",
+    documentation: "https://tailwindcss.com/",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+  },
+  {
+    technology: "JavaScript",
+    documentation: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+  },
+  {
+    technology: "TypeScript",
+    documentation: "https://www.typescriptlang.org/",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+  },
+  {
+    technology: "Vite",
+    documentation: "https://vitejs.dev/",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg",
+  },
+  {
+    technology: "React",
+    documentation: "https://react.dev/",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+  },
+  {
+    technology: "Next.js",
+    documentation: "https://nextjs.org/",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+  },
+  {
+    technology: "Redux",
+    documentation: "https://redux.js.org",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg",
+  },
+  {
+    technology: "Angular",
+    documentation: "https://angular.dev/",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg",
+  },
+  {
+    technology: "Node.js",
+    documentation: "https://nodejs.org",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
+  },
+  {
+    technology: "Bun",
+    documentation: "https://bun.sh/",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bun/bun-original.svg",
+  },
+  {
+    technology: "Express",
+    documentation: "https://expressjs.com",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
+  },
+  {
+    technology: "GraphQL",
+    documentation: "https://graphql.org/",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/graphql/graphql-plain.svg",
+  },
+  {
+    technology: "C#",
+    documentation: "https://www.w3schools.com/cs/",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg",
+  },
+  {
+    technology: "Python",
+    documentation: "https://www.python.org",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+  },
+  {
+    technology: "MongoDB",
+    documentation: "https://www.mongodb.com/",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
+  },
+  {
+    technology: "PostgreSQL",
+    documentation: "https://www.postgresql.org/",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+  },
+  {
+    technology: "NGINX",
+    documentation: "https://www.nginx.com/",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nginx/nginx-original.svg",
+  },
+];
 
 export const projectsData = [
   {
