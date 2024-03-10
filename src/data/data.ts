@@ -1,6 +1,10 @@
+import { createElement } from "react";
 import corpcommentImg from "../../public/corpcomment.png";
 import rmtdevImg from "../../public/rmtdev.png";
 import wordanalyticsImg from "../../public/wordanalytics.png";
+import { CgWorkAlt } from "react-icons/cg";
+import { FaReact } from "react-icons/fa";
+import { LuGraduationCap } from "react-icons/lu";
 
 export const links = [
   {
@@ -158,5 +162,53 @@ export const projectsData = [
       "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
     tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
     imageUrl: wordanalyticsImg,
+  },
+] as const;
+
+export const experiencesData = [
+  {
+    title: "Full-stack Developer",
+    company: "Freelance",
+    location: "Baku, Azerbaijan (Remote)",
+    description:
+      "Building web apps for clients. I work with Next.js, Tailwind CSS, Figma, Express.js, Prisma and PostgreSQL.",
+    icon: createElement(FaReact),
+    date: "02/2024 - current",
+  },
+  {
+    title: "Frontend Developer",
+    company: "Agamira",
+    location: "Kyiv, Ukraine (Remote)",
+    description:
+      "Building a AI integrated web app for a startup. I work with React, Grapes.js, SCSS, REST API",
+    icon: createElement(FaReact),
+    date: "07/2023 - 01/2024",
+  },
+  {
+    title: "Advanced Full-stack Development Bootcamp",
+    company: "ABB Tech Academy",
+    location: "Baku, Azerbaijan",
+    description:
+      "I studied advanced full-stack development for 6 months. I learned advanced concepts in JavaScript, React, Node.js, Express and PostgreSQL.",
+    icon: createElement(LuGraduationCap),
+    date: "05/2023 - 11/2023",
+  },
+  {
+    title: "Full-stack Developer",
+    company: "Azerbaijan Aerospace Agency",
+    location: "Baku, Azerbaijan",
+    description:
+      "Building REST APIs and web apps for the agency. I worked with Node.js, Express, MongoDB, React and SCSS.",
+    icon: createElement(CgWorkAlt),
+    date: "02/2023 - 07/2023",
+  },
+  {
+    title: "Full-Stack Development Bootcamp",
+    company: "Code Academy",
+    location: "Baku, Azerbaijan",
+    description:
+      "I studied full-stack development for 6 months. I learned HTML, CSS, SCSS, JavaScript, React, Redux, Node.js, Express and MongoDB.",
+    icon: createElement(LuGraduationCap),
+    date: "09/2022 - 02/2023",
   },
 ] as const;
