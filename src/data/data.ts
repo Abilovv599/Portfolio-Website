@@ -1,4 +1,4 @@
-import React, { createElement } from "react";
+import { createElement } from "react";
 import corpcommentImg from "../../public/corpcomment.png";
 import rmtdevImg from "../../public/rmtdev.png";
 import wordanalyticsImg from "../../public/wordanalytics.png";
