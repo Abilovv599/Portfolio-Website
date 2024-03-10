@@ -1,4 +1,10 @@
-import { IntroSection, AboutSection, ProjectsSection } from "@/app/sections";
+import {
+  IntroSection,
+  AboutSection,
+  ProjectsSection,
+  SkillsSection,
+  ExperienceSection,
+} from "@/app/sections";
 import { SectionDivider } from "@/components";
 import { NextPage } from "next";
 
@@ -10,6 +16,11 @@ const Home: NextPage = () => {
       <AboutSection />
       <SectionDivider />
       <ProjectsSection />
+      <SectionDivider />
+      <SkillsSection />
+      <SectionDivider />
+      <ExperienceSection />
+      <SectionDivider />
     </main>
   );
 };
