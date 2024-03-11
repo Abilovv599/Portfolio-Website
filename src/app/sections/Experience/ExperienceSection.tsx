@@ -8,14 +8,14 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { useSectionInView } from "@/hooks";
+import { useSectionInView, useThemeSwitcher } from "@/hooks";
 
 interface ExperienceSectionProps extends ComponentPropsWithoutRef<"section"> {}
 
 const ExperienceSection: FC<ExperienceSectionProps> = ({ ...props }) => {
   const { ref, inView } = useSectionInView("Experience", 0.1);
 
-  const theme = "light";
+  const { theme } = useThemeSwitcher();
 
   return (
     <section
@@ -48,7 +48,9 @@ const ExperienceSection: FC<ExperienceSectionProps> = ({ ...props }) => {
               icon={item.icon}
               iconStyle={{
                 background:
-                  theme === "light" ? "white" : "rgba(255, 255, 255, 0.15)",
+                  theme === "light"
+                    ? "white"
+                    : "rgb(17 24 39 / var(--tw-bg-opacity))",
                 fontSize: "1.5rem",
               }}
             >
