@@ -21,7 +21,7 @@ const ExperienceSection: FC<ExperienceSectionProps> = ({ ...props }) => {
     <section
       id="experience"
       ref={ref}
-      className="mb-28 mt-4 scroll-mt-28 sm:mb-5"
+      className="mb-28 scroll-mt-28 sm:mb-40"
       {...props}
     >
       <SectionHeading>My experience</SectionHeading>
