@@ -1,7 +1,7 @@
 import { ThemeSwitcherContext } from "@/context";
 import { useContext } from "react";
 
-function useThemeSwitcher() {
+function useThemeSwitcherContext() {
   const context = useContext(ThemeSwitcherContext);
 
   if (context === null) {
@@ -11,4 +11,4 @@ function useThemeSwitcher() {
   return context;
 }
 
-export { useThemeSwitcher };
+export { useThemeSwitcherContext };

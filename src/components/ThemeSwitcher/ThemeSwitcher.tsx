@@ -1,13 +1,13 @@
 "use client";
 
-import { useThemeSwitcher } from "@/hooks";
+import { useThemeSwitcherContext } from "@/hooks";
 import { FC, ComponentPropsWithoutRef } from "react";
 import { BsMoon, BsSun } from "react-icons/bs";
 
 interface ThemeSwitcherProps extends ComponentPropsWithoutRef<"button"> {}
 
 const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ ...props }) => {
-  const { theme, toggleTheme } = useThemeSwitcher();
+  const { theme, toggleTheme } = useThemeSwitcherContext();
 
   return (
     <button

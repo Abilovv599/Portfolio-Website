@@ -8,14 +8,14 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { useSectionInView, useThemeSwitcher } from "@/hooks";
+import { useSectionInView, useThemeSwitcherContext } from "@/hooks";
 
 interface ExperienceSectionProps extends ComponentPropsWithoutRef<"section"> {}
 
 const ExperienceSection: FC<ExperienceSectionProps> = ({ ...props }) => {
-  const { ref, inView } = useSectionInView("Experience", 0.1);
+  const { ref, inView } = useSectionInView("Experience"); // pass here 0.1 as a second argument to make the animation work in development (because it's working in production but not in development xD )
 
-  const { theme } = useThemeSwitcher();
+  const { theme } = useThemeSwitcherContext();
 
   return (
     <section
@@ -29,7 +29,7 @@ const ExperienceSection: FC<ExperienceSectionProps> = ({ ...props }) => {
         {experiencesData.map((item, index) => (
           <Fragment key={index}>
             <VerticalTimelineElement
-              // visible={inView} // add this prop to make the animation work in development (it's working in production)
+              // visible={inView} // add this prop to make the animation work in development (because it's working in production but not in development xD )
               contentStyle={{
                 background:
                   theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
