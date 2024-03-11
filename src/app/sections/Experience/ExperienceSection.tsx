@@ -29,7 +29,7 @@ const ExperienceSection: FC<ExperienceSectionProps> = ({ ...props }) => {
         {experiencesData.map((item, index) => (
           <Fragment key={index}>
             <VerticalTimelineElement
-              visible={inView}
+              // visible={inView} // add this prop to make the animation work in development (it's working in production)
               contentStyle={{
                 background:
                   theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
