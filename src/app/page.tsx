@@ -4,6 +4,7 @@ import {
   ProjectsSection,
   SkillsSection,
   ExperienceSection,
+  ContactSection,
 } from "@/app/sections";
 import { SectionDivider } from "@/components";
 import { NextPage } from "next";
@@ -20,7 +21,7 @@ const Home: NextPage = () => {
       <SkillsSection />
       <SectionDivider />
       <ExperienceSection />
-      <SectionDivider />
+      <ContactSection />
     </main>
   );
 };
