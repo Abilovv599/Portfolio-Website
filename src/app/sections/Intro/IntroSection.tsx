@@ -20,7 +20,7 @@ const IntroSection: FC<IntroSectionProps> = ({ ...props }) => {
       ref={ref}
       {...props}
       id="home"
-      className="mb-28 max-w-[50rem] scroll-mt-[100rem] text-center sm:mb-0"
+      className="mb-20 mt-4 max-w-[50rem] scroll-mt-[100rem] text-center sm:mb-0 sm:mt-0"
     >
       <div className="flex items-center justify-center">
         <div className="relative">
@@ -87,7 +87,7 @@ const IntroSection: FC<IntroSectionProps> = ({ ...props }) => {
       >
         <Link
           href="/#contact"
-          className="group flex items-center gap-2 rounded-full bg-gray-900 px-7 py-3 text-white outline-none transition hover:scale-110 hover:bg-gray-950 active:scale-105"
+          className="group flex items-center gap-2 rounded-full bg-gray-900 px-7 py-3 text-white outline-none transition hover:scale-110 hover:bg-gray-950 active:scale-105 dark:border dark:border-white dark:border-opacity-40 sm:dark:border-none"
           onClick={() => {
             setActiveSection("Contact");
             setTimeOfLastClick(Date.now());
