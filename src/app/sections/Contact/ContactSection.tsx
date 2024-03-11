@@ -4,23 +4,11 @@ import { FC } from "react";
 import { useSectionInView } from "@/hooks";
 import { motion, HTMLMotionProps } from "framer-motion";
 import { SectionHeading, SubmitButton } from "@/components";
-import { sendEmail } from "@/actions";
-import toast from "react-hot-toast";
 
 interface ContactSectionProps extends HTMLMotionProps<"section"> {}
 
 const ContactSection: FC<ContactSectionProps> = ({ ...props }) => {
   const { ref } = useSectionInView("Contact");
-
-  async function handleSubmit(formData: FormData) {
-    const { error } = await sendEmail(formData);
-
-    if (error) {
-      toast.error(error);
-      return;
-    }
-    toast.success("Email sent successfully!");
-  }
 
   return (
     <motion.section
@@ -51,10 +39,7 @@ const ContactSection: FC<ContactSectionProps> = ({ ...props }) => {
         or through this form.
       </p>
 
-      <form
-        className="mt-10 flex flex-col dark:text-black"
-        action={handleSubmit}
-      >
+      <form className="mt-10 flex flex-col dark:text-black">
         <input
           className="borderBlack h-14 rounded-lg px-4 outline-slate-950 transition-all dark:bg-white dark:bg-opacity-80 dark:outline-none dark:focus:bg-opacity-100"
           name="senderEmail"
@@ -70,7 +55,7 @@ const ContactSection: FC<ContactSectionProps> = ({ ...props }) => {
           required
           maxLength={5000}
         />
-        <SubmitButton />
+        <SubmitButton disabled />
       </form>
     </motion.section>
   );
