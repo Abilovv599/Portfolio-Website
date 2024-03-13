@@ -5,7 +5,7 @@ import {
   SkillsSection,
   ExperienceSection,
   ContactSection,
-} from "@/app/sections";
+} from "@/views/Home/sections";
 import { SectionDivider } from "@/components";
 import { NextPage } from "next";
 

@@ -12,6 +12,11 @@ const ThemeSwitcherContextProvider: FC<ThemeContextProviderProps> = ({
   children,
 }) => {
   const [theme, setTheme] = useState<Theme>("light");
+  useEffect(() => {
+    setTimeout(() => {
+      setTheme(global.window?.__theme);
+    });
+  }, []);
 
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
