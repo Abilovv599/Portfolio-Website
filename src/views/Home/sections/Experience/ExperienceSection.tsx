@@ -13,8 +13,7 @@ import { useSectionInView, useThemeSwitcherContext } from "@/hooks";
 interface ExperienceSectionProps extends ComponentPropsWithoutRef<"section"> {}
 
 const ExperienceSection: FC<ExperienceSectionProps> = ({ ...props }) => {
-  const { ref, inView } = useSectionInView("Experience"); // pass here 0.1 as a second argument to make the animation work in development (because it's working in production but not in development xD )
-
+  const { ref, inView } = useSectionInView("Experience", 0.1);
   const { theme } = useThemeSwitcherContext();
 
   return (
