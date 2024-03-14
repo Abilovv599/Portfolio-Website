@@ -23,7 +23,7 @@ const fadeInAnimationVariants = {
 interface SkillsSectionProps extends ComponentPropsWithoutRef<"section"> {}
 
 const SkillsSection: FC<SkillsSectionProps> = ({ ...props }) => {
-  const { ref } = useSectionInView("Skills");
+  const { ref } = useSectionInView("Skills", 0.2);
 
   return (
     <section
