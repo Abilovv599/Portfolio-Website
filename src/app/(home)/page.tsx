@@ -1,3 +1,5 @@
+import type { NextPage } from "next";
+import { SectionDivider } from "@/components";
 import {
   IntroSection,
   AboutSection,
@@ -6,8 +8,6 @@ import {
   ExperienceSection,
   ContactSection,
 } from "@/views/Home/sections";
-import { SectionDivider } from "@/components";
-import { NextPage } from "next";
 
 const Home: NextPage = () => {
   return (
