@@ -1,3 +1,4 @@
+import { ThemeSwitcher } from "@/components";
 import { FC, ReactNode } from "react";
 
 interface AuthLayoutProps {
@@ -5,7 +6,12 @@ interface AuthLayoutProps {
 }
 
 const AuthLayout: FC<AuthLayoutProps> = ({ children }) => {
-  return <>{children}</>;
+  return (
+    <>
+      {children}
+      <ThemeSwitcher />
+    </>
+  );
 };
 
 export default AuthLayout;
