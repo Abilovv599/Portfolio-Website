@@ -1,8 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { ThemeScript } from "@/utils";
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Inter } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 import { ThemeSwitcherContextProvider } from "@/context";
@@ -30,8 +28,6 @@ export default function RootLayout({
         className={`${inter.className} relative bg-gray-50  text-gray-950 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
       >
         <ThemeSwitcherContextProvider>
-          <Analytics />
-          <SpeedInsights />
           {children}
           <Toaster position="top-right" />
         </ThemeSwitcherContextProvider>
