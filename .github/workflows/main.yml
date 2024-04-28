@@ -74,7 +74,6 @@ jobs:
             docker-compose down
             docker rmi ${{ secrets.CLIENT_DOCKER_IMAGE }}
             docker-compose up -d
-            cd .. && rm -rf client
 
       - name: Docker Logout
         if: always()
