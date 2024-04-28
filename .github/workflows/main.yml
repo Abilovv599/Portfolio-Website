@@ -69,6 +69,9 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             cd ~/Portfolio/client
+            if [ -f .env ]; then
+            rm .env
+            fi
             touch .env
             echo "CLIENT_DOCKER_IMAGE=${{ secrets.CLIENT_DOCKER_IMAGE }}" >> .env
             docker-compose down
