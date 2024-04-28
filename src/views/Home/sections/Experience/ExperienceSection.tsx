@@ -1,7 +1,7 @@
 "use client";
 
 import { FC, ComponentPropsWithoutRef, Fragment } from "react";
-import { SectionHeading } from "@/components";
+import { SectionHeading } from "@/components/shared";
 import { experiencesData } from "@/data/data";
 import {
   VerticalTimeline,
@@ -13,7 +13,9 @@ import { useSectionInView, useThemeSwitcherContext } from "@/hooks";
 interface ExperienceSectionProps extends ComponentPropsWithoutRef<"section"> {}
 
 const ExperienceSection: FC<ExperienceSectionProps> = ({ ...props }) => {
-  const { ref, inView } = useSectionInView("Experience", 0.3);
+  const {
+    ref, //inView
+  } = useSectionInView("Experience", 0.3);
   const { theme } = useThemeSwitcherContext();
 
   return (

@@ -1,5 +1,5 @@
 import { SectionName } from "@/types";
-import { useActiveSectionStore } from "./";
+import { useActiveSectionStore } from ".";
 
 const setActiveSection = (section: SectionName) =>
   useActiveSectionStore.setState((state) => {

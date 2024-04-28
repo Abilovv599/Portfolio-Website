@@ -2,7 +2,7 @@
 
 import { FC, useEffect, useState } from "react";
 import { Theme } from "@/types";
-import { ThemeSwitcherContext } from "./ThemeSwitcherContext";
+import { ThemeSwitcherContext } from "./";
 
 type ThemeContextProviderProps = {
   children: React.ReactNode;

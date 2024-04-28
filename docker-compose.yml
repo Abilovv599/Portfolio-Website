@@ -1,0 +1,15 @@
+services:
+  client:
+    container_name: client
+    image: ${CLIENT_DOCKER_IMAGE:?error}
+    restart: always
+    ports:
+      - 3000:3000
+    env_file: .env
+    networks:
+      - app_network
+
+networks:
+  app_network:
+    driver: bridge
+    external: true
