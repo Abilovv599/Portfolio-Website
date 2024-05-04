@@ -20,7 +20,10 @@ const registerFormSchema = yup.object({
   password: yup
     .string()
     .required("Password is required")
-    .min(8, "Minimum password length is 8")
+    .matches(
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
+      "Password must contain at least 8 characters, one uppercase letter, one lowercase letter, one number, and one special character",
+    )
     .max(100, "Maximum password length is 100"),
   confirmPassword: yup
     .string()

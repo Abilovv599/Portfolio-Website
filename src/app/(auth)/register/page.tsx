@@ -1,22 +1,39 @@
 "use client";
 
 import type { NextPage } from "next";
-import { registerFormSchema, registerFormSchemaType } from "@/schema";
-import { FieldValues, useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+
+import { yupResolver } from "@hookform/resolvers/yup";
+import { FieldValues, useForm } from "react-hook-form";
+import toast from "react-hot-toast";
+
+import { registerFormSchema, registerFormSchemaType } from "@/schema";
+import { registerUser } from "@/services";
 
 const Register: NextPage = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm<registerFormSchemaType>({
     resolver: yupResolver(registerFormSchema),
   });
 
-  const onSubmit = (data: FieldValues) => console.log(data);
+  const router = useRouter();
+
+  const onSubmit = async (data: FieldValues) => {
+    try {
+      const res = await registerUser(data);
+      reset();
+      toast.success("Account created successfully");
+      router.replace("/login");
+    } catch (error: any) {
+      toast.error(error.response.data.message || "An error occurred");
+    }
+  };
 
   return (
     <main id="login" className="w-full px-4  dark:bg-black">
@@ -27,7 +44,11 @@ const Register: NextPage = () => {
               <h1 className="text-2xl font-semibold">Register</h1>
               <p className="text-sm">
                 Already have an account?&nbsp;
-                <Link href={"/login"} className="text-blue-500 hover:underline">
+                <Link
+                  href={"/login"}
+                  replace
+                  className="text-blue-500 hover:underline"
+                >
                   Log in!
                 </Link>
               </p>
@@ -126,6 +147,7 @@ const Register: NextPage = () => {
                   </label>
                   <input
                     id="confirmPassword"
+                    type="password"
                     {...register("confirmPassword")}
                     className="mt-1 min-h-9 w-full rounded-[4px] border border-solid border-slate-500 border-opacity-30 bg-slate-100 px-3 dark:bg-stone-950"
                   />

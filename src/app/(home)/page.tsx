@@ -1,12 +1,13 @@
 import type { NextPage } from "next";
+
 import { SectionDivider } from "@/components/shared";
 import {
-  IntroSection,
   AboutSection,
+  ContactSection,
+  ExperienceSection,
+  IntroSection,
   ProjectsSection,
   SkillsSection,
-  ExperienceSection,
-  ContactSection,
 } from "@/views/Home/sections";
 
 const Home: NextPage = () => {
