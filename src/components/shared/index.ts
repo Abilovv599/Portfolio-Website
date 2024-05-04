@@ -1,4 +1,4 @@
-export { SectionDivider } from "./SectionDivider";
-export { SectionHeading } from "./SectionHeading";
-export { SubmitButton } from "./SubmitButton";
-export { ThemeSwitcher } from "./ThemeSwitcher";
+export * from "./SectionDivider";
+export * from "./SectionHeading";
+export * from "./SubmitButton";
+export * from "./ThemeSwitcher";

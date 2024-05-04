@@ -1,2 +1,4 @@
-export type { SectionName } from "./sectionName";
-export type { Theme } from "./theme";
+export type * from "./Role";
+export type * from "./User";
+export type * from "./Theme";
+export type * from "./SectionName";

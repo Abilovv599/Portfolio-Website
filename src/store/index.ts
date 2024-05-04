@@ -1,1 +1,1 @@
-export { useActiveSectionStore } from "./ActiveSection";
+export * from "./ActiveSection";

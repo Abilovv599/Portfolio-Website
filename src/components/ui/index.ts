@@ -1,2 +1,2 @@
-export { Project } from "./Project";
-export { Skill } from "./Skill";
+export * from "./Project";
+export * from "./Skill";

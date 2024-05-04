@@ -1,1 +1,1 @@
-export { SectionDivider } from "./SectionDivider";
+export * from "./SectionDivider";

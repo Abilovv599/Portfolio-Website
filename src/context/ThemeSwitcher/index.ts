@@ -1,2 +1,2 @@
-export { ThemeSwitcherContext } from "./ThemeSwitcherContext";
-export { ThemeSwitcherContextProvider } from "./ThemeSwitcherContextProvider";
+export * from "./ThemeSwitcherContext";
+export * from "./ThemeSwitcherContextProvider";
