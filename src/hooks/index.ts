@@ -1,2 +1,3 @@
-export { useSectionInView } from "./useSectionInView";
-export { useThemeSwitcherContext } from "./useThemeSwitcherContext";
+export * from "./useSectionInView";
+export * from "./useThemeSwitcherContext";
+export * from "./useAuthContext";

@@ -1,5 +1,5 @@
-import { ThemeSwitcher } from "@/components";
-import { Header, Footer } from "@/layouts";
+import { ThemeSwitcher } from "@/components/shared";
+import { Footer, Header } from "@/layouts";
 
 export default function HomeLayout({
   children,

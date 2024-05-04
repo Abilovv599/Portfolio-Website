@@ -1,4 +1,2 @@
-export {
-  ThemeSwitcherContext,
-  ThemeSwitcherContextProvider,
-} from "./ThemeSwitcher";
+export * from "./ThemeSwitcher";
+export * from "./Auth";
