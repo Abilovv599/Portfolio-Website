@@ -1,14 +1,22 @@
-import { ThemeSwitcher } from "@/components/shared";
+"use client";
+
 import { FC, ReactNode } from "react";
+
+import { ThemeSwitcher } from "@/components/shared";
+import { useAuthContext } from "@/hooks";
 
 interface AuthLayoutProps {
   children: Readonly<ReactNode>;
 }
 
 const AuthLayout: FC<AuthLayoutProps> = ({ children }) => {
+  const { isLoading, data } = useAuthContext();
+
+  if (isLoading) return <></>;
+
   return (
     <>
-      {children}
+      {data ? window.history.back() : children}
       <ThemeSwitcher />
     </>
   );

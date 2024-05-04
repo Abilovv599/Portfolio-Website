@@ -1,22 +1,47 @@
 "use client";
 
 import type { NextPage } from "next";
-import { loginFormSchema, loginFormSchemaType } from "@/schema";
-import { FieldValues, useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+
+import { yupResolver } from "@hookform/resolvers/yup";
+import { FieldValues, useForm } from "react-hook-form";
+import toast from "react-hot-toast";
+
+import { loginFormSchema, loginFormSchemaType } from "@/schema";
+import { loginUser } from "@/services";
 
 const Login: NextPage = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<loginFormSchemaType>({
     resolver: yupResolver(loginFormSchema),
   });
 
-  const onSubmit = (data: FieldValues) => console.log(data);
+  const router = useRouter();
+
+  const onSubmit = async (data: FieldValues) => {
+    const { rememberMe, ...rest } = data;
+
+    try {
+      const res = await loginUser({
+        email: rest.email,
+        password: rest.password,
+      });
+      const { access_token } = res.data;
+      reset();
+      router.back();
+      rememberMe
+        ? localStorage.setItem("access_token", access_token)
+        : sessionStorage.setItem("access_token", access_token);
+    } catch (error: any) {
+      toast.error(error.response.data.message || "An error occurred");
+    }
+  };
 
   return (
     <main id="login" className="w-full px-4  dark:bg-black">
@@ -29,6 +54,7 @@ const Login: NextPage = () => {
                 Don&apos;t have an account?&nbsp;
                 <Link
                   href={"/register"}
+                  replace
                   className="text-blue-500 hover:underline"
                 >
                   Register!
@@ -60,7 +86,7 @@ const Login: NextPage = () => {
           <div className="mt-4">
             <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col">
               <div className="min-h-[5.5rem]">
-                <label htmlFor="email" className="text-sm">
+                <label htmlFor="email" className="cursor-pointer text-sm">
                   Email
                 </label>
                 <input
@@ -75,7 +101,7 @@ const Login: NextPage = () => {
                 )}
               </div>
               <div className="min-h-[5.5rem]">
-                <label htmlFor="password" className="text-sm">
+                <label htmlFor="password" className="cursor-pointer text-sm">
                   Password
                 </label>
                 <input
@@ -95,17 +121,22 @@ const Login: NextPage = () => {
                   <div className="flex items-center gap-2">
                     <input
                       type="checkbox"
+                      id="rememberMe"
                       placeholder="Remember me"
                       {...register("rememberMe")}
                       className="size-4 appearance-none rounded-[4px] border border-solid border-slate-500 border-opacity-30 checked:appearance-auto dark:bg-stone-950"
                     />
-                    <label htmlFor="rememberMe" className="text-sm">
+                    <label
+                      htmlFor="rememberMe"
+                      className="cursor-pointer text-sm"
+                    >
                       Remember me
                     </label>
                   </div>
                   <div>
                     <Link
                       href={"/forgot-password"}
+                      replace
                       className="text-sm text-blue-500 hover:underline"
                     >
                       Forgot your password?
