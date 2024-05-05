@@ -1,8 +1,9 @@
 import axios from "axios";
 
-const baseURL = process.env.API_URL;
-
-const api = axios.create({ baseURL });
+const api = axios.create({
+  baseURL:
+    process.env.NEXT_PUBLIC_API_URL ?? "https://api.jeyhunabilov.live/v1",
+});
 
 api.interceptors.request.use((config) => {
   const access_token =
