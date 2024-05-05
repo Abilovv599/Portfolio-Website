@@ -2,7 +2,7 @@
 
 import { FC, ComponentPropsWithoutRef, Fragment } from "react";
 import { SectionHeading } from "@/components/shared";
-import { experiencesData } from "@/data/data";
+import { experiencesData } from "@/data";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
