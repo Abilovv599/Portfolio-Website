@@ -15,6 +15,7 @@ const AuthContextProvider: FC<AuthContextProviderProps> = ({ children }) => {
   const query = useQuery({
     queryKey: ["profile"],
     queryFn: getUserProfile,
+    select: (res) => res.data,
     retry: 0,
   });
   return (
