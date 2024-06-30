@@ -53,7 +53,7 @@ const IntroSection: FC<IntroSectionProps> = ({ ...props }) => {
               duration: 0.7,
             }}
           >
-            🇦🇿
+            <img src="/az.png" alt="AZ" width="48" height="48" />
           </motion.span>
         </div>
       </div>
